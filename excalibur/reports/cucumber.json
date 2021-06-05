@@ -1,0 +1,76 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Endurance Test",
+        "description": "",
+        "id": "performance-test;endurance-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 238986715,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I open the app",
+            "match": {
+              "location": "StepDef.i_open_the_app()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2922592,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I run the app for 30 mins",
+            "match": {
+              "arguments": [
+                {
+                  "val": "30",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDef.i_run_the_app_for_mins(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60940,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I close the app",
+            "match": {
+              "location": "StepDef.i_close_the_app()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@stress"
+          }
+        ]
+      }
+    ],
+    "name": "Performance Test",
+    "description": "",
+    "id": "performance-test",
+    "keyword": "Feature",
+    "uri": "test2.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Performance"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.24197">
+<testcase classname="Performance Test" name="Endurance Test" time="0.24197">
+<system-out><![CDATA[Given I open the app........................................................passed
+Then I run the app for 30 mins..............................................passed
+And I close the app.........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

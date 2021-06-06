@@ -14,6 +14,7 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import test.utils.xlsxReader;
 
 import org.openqa.selenium.By;
@@ -42,7 +43,7 @@ public class StepDef {
 	
 	}
 
-	@Then("^I launch the website$")
+	@When("^I launch the website$")
 	public void i_launch_the_website() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		if(xlsxReader.getColumnData("test.xlsx", "Run", 0, 0).trim().equalsIgnoreCase("Chrome"))

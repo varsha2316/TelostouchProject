@@ -59,6 +59,7 @@ public class StepDef {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		System.out.println("XXXX:  "+url);
 		driver.get(url);
+		driver.manage().window().maximize();
 		
 	   
 	}
@@ -135,16 +136,64 @@ public class StepDef {
 		cp.clickSearch();
 	}
 	
-	@Then("^I click transmission button of car search page$")
-	public void i_click_transmission_button_of_car_search_page() throws Throwable {
+	@Then("^I click Recommended link of car search page$")
+	public void i_click_Recommended_link_of_car_search_page() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   CarSearch cs = new CarSearch(driver);
 		cs.clicktrans();	   
+	}
+	
+	@Then("^I click deal link of car search page$")
+	public void i_click_deal_link_of_car_search_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		 CarSearch cs = new CarSearch(driver);
+			cs.clickdeal();
+	}
+	@Then("^I click next button to book the car$")
+	public void i_click_next_button_to_book_the_car() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		 CarSearch cs = new CarSearch(driver);
+			cs.nextdeal();
+	}
+	
+	@Then("^I put \"([^\"]*)\" as \"([^\"]*)\"$")
+	public void i_put_as(String arg1, String arg2) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		CarRentalcheckout ch = new CarRentalcheckout(driver);
+		
+	    switch (arg1)
+	    {
+	    case "firstname": {
+	    	ch.setFirstName(arg2);
+		    break;
+		  }
+	    case "surname": {
+	    	ch.setLastName(arg2);
+		    break;
+		  }
+	    case "Mobile": {
+	    	ch.setMobile(arg2);
+		    break;
+		  }
+	    case "Email": {
+	    	ch.setEmail(arg2);
+		    break;
+		  }
+	    
+	    }
+	}
+	
+	@Then("^I click book button of checkoutpage$")
+	public void i_click_book_button_of_checkoutpage() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		CarRentalcheckout ch = new CarRentalcheckout(driver);
+		ch.bookButton();
 	}
 
 	
 	@Then("^I close the website$")
 	public void i_close() throws Throwable {
+		Thread.sleep(5000);
 		driver.quit();
 	}
 
